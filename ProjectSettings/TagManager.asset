@@ -11,13 +11,13 @@ TagManager:
   - 
   - Water
   - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
   - cam
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
   - 
   - 
   - 
@@ -40,4 +40,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: plats
+    uniqueID: 4188858527
+    locked: 0
+  - name: New Layer 2
+    uniqueID: 739340127
     locked: 0
