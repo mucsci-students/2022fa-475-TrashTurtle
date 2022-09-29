@@ -8,6 +8,8 @@ namespace UnityStandardAssets._2D
         private PlatformerCharacter2D m_Character;
         private bool m_Jump_down;
         private bool m_Jump_button;
+        public ProjectileBehavior projectilePrefab;
+        public Transform LaunchOffset;
 
         private void Awake()
         {
@@ -23,6 +25,10 @@ namespace UnityStandardAssets._2D
                 m_Jump_down = Input.GetButtonDown("Jump");
                 // m_Jump_button duration jump is pressed
                 m_Jump_button = Input.GetButton("Jump");
+            }
+            if(Input.GetButtonDown("Fire1"))
+            {
+                Instantiate(projectilePrefab, LaunchOffset.position, transform.rotation);
             }
         }
 
