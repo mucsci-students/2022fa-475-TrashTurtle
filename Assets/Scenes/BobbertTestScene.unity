@@ -341,6 +341,14 @@ PrefabInstance:
       propertyPath: BobbertV2
       value: 
       objectReference: {fileID: 1371340986}
+    - target: {fileID: 8578892511685768249, guid: b382b3d023bff484c8315bb5d7eb492f, type: 3}
+      propertyPath: LaunchOffset
+      value: 
+      objectReference: {fileID: 1553437843}
+    - target: {fileID: 8578892511685768249, guid: b382b3d023bff484c8315bb5d7eb492f, type: 3}
+      propertyPath: projectilePrefab
+      value: 
+      objectReference: {fileID: 7773601820910049523, guid: 90124f1d3edf58742a3aa35b3d2025bc, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b382b3d023bff484c8315bb5d7eb492f, type: 3}
 --- !u!4 &1371340986 stripped
@@ -610,6 +618,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1553437843 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8578892511256303094, guid: b382b3d023bff484c8315bb5d7eb492f, type: 3}
+  m_PrefabInstance: {fileID: 594446917}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1960650616
 GameObject:
   m_ObjectHideFlags: 0
