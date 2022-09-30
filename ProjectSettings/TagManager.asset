@@ -41,6 +41,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: clouds
+    uniqueID: 624909645
+    locked: 0
   - name: plats
     uniqueID: 4188858527
     locked: 0
