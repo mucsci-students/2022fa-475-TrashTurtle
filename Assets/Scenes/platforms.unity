@@ -9288,17 +9288,10 @@ PlatformEffector2D:
   m_UseOneWayGrouping: 0
   m_SurfaceArc: 0
   m_UseSideFriction: 0
-<<<<<<< HEAD
   m_UseSideBounce: 1
   m_SideArc: 180
 --- !u!19719996 &507342906
 TilemapCollider2D:
-=======
-  m_UseSideBounce: 0
-  m_SideArc: 0
---- !u!61 &507342899
-BoxCollider2D:
->>>>>>> c4a7cc47153e4fc8db21ec219aba1004b7e82c7a
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -10945,11 +10938,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6680950459666975773, guid: 8990b74fba332a042bb79056f9754110, type: 3}
       propertyPath: m_LocalPosition.y
-<<<<<<< HEAD
       value: -2.49
-=======
-      value: -1.57
->>>>>>> c4a7cc47153e4fc8db21ec219aba1004b7e82c7a
       objectReference: {fileID: 0}
     - target: {fileID: 6680950459666975773, guid: 8990b74fba332a042bb79056f9754110, type: 3}
       propertyPath: m_LocalPosition.z
