@@ -17,12 +17,11 @@ public class ProjectileBehavior : MonoBehaviour{
     // Update is called once per frame
     private void Update()
     {
-        m_Anim.GetBool("facingRight")
-        If(Input.GetAxis("Horizontal"))
-        {
-            transform.position += -transform.right * Time.deltaTime * speed;
-        }
-        else
+        //m_Anim.GetBool("facingRight")
+        // If(Input.GetAxis("Horizontal"))
+        // {
+        //     transform.position += -transform.right * Time.deltaTime * speed;
+        // }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
