@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 3174069678131877770}
   - component: {fileID: 7773601820910049523}
   m_Layer: 0
-  m_Name: AmmoParent
+  m_Name: AmmoParent 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -163,9 +163,9 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3174069678131877771}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7a419f6130dbfb44b0252f86d70f102, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10.02
+  speed: 10

@@ -8,8 +8,6 @@ namespace UnityStandardAssets._2D
         private PlatformerCharacter2D m_Character;
         private bool m_Jump_down;
         private bool m_Jump_button;
-        public ProjectileBehavior projectilePrefab;
-        public Transform LaunchOffset;
 
         private void Awake()
         {

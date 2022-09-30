@@ -20,11 +20,14 @@ namespace UnityStandardAssets._2D
         const float k_CeilingRadius = .01f;     // Radius of the overlap circle to determine if the player can stand up
         const float m_CrouchSpeed = 0f;         // Movement speed when crouched
         private bool m_Grounded;                // Whether or not the player is grounded.
-        private bool m_FacingRight = true;      // For determining which way the player is currently facing.
+        public bool m_FacingRight = true;      // For determining which way the player is currently facing.
         private bool isJumping;                 // Whether or not the player is in the air with jumpHoldDuration.
 
         public float jumpHoldDuration = 0.25f;  // Max duration to hold space and gain velocity.
         public float jumpHoldCounter;           // Control for jumpHoldDuration
+        public float projectileSpeed = 4.5f;
+        public Transform LaunchOffset;
+        public ProjectileBehavior projectilePrefab;
 
         private void Awake()
         {
@@ -34,6 +37,11 @@ namespace UnityStandardAssets._2D
             m_Anim = GetComponent<Animator>();
             m_Rigidbody2D = GetComponent<Rigidbody2D>();
         }
+
+        // public void fire()
+        // {
+        //     Instantiate(projectilePrefab, LaunchOffset.position, transform.rotation);
+        // }
 
         private void FixedUpdate()
         {
@@ -89,6 +97,7 @@ namespace UnityStandardAssets._2D
                 if (move > 0 && !m_FacingRight)
                 {
                     Flip();
+
                 }
                 // If moving left and facing right:
                 else if (move < 0 && m_FacingRight)
@@ -143,11 +152,16 @@ namespace UnityStandardAssets._2D
         {
             // Switch the way the player is labelled as facing.
             m_FacingRight = !m_FacingRight;
+            m_Anim.SetBool = ("Facing Right", m_FacingRight)
 
             // Multiply the player's x local scale by -1.
             Vector3 theScale = transform.localScale;
             theScale.x *= -1;
             transform.localScale = theScale;
         }
+        // public bool getFace()
+        // {
+        //     return m_FacingRight;
+        // }
     }
 }

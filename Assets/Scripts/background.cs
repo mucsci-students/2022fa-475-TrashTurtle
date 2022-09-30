@@ -6,7 +6,7 @@ public class background : MonoBehaviour
     public Transform midBG;
     public Transform sideBG;
   
-    public float length = 30.23f;
+    public float length = 41.23f;
     void Update()
     {
         if(mainCam.position.x > midBG.position.x){
