@@ -25,15 +25,6 @@ namespace UnityStandardAssets._2D
 
         public float jumpHoldDuration = 0.25f;  // Max duration to hold space and gain velocity.
         public float jumpHoldCounter;           // Control for jumpHoldDuration
-        public float projectileSpeed = 4.5f;
-        // ProjectileBehaviorLeft projectilePrefabLeft;
-        // ProjectileBehaviorRight projectilePrefabRight;
-        public Transform LaunchOffsetLeft;
-        public Transform LaunchOffsetRight;
-        public ProjectileBehaviorLeft projectilePrefabLeft;
-        public ProjectileBehaviorRight projectilePrefabRight;
-        // LaunchOffsetLeft = transform.Find("LaunchOffsetLeft");
-        // LaunchOffsetRight = transform.Find("LaunchOffsetRight");
 
         private void Awake()
         {
@@ -42,8 +33,6 @@ namespace UnityStandardAssets._2D
             m_CeilingCheck = transform.Find("CeilingCheck");
             m_Anim = GetComponent<Animator>();
             m_Rigidbody2D = GetComponent<Rigidbody2D>();
-            // LaunchOffsetLeft = transform.Find("LaunchOffsetLeft");
-            // LaunchOffsetRight = transform.Find("LaunchOffsetRight");
         }
 
         private void FixedUpdate()
@@ -63,22 +52,20 @@ namespace UnityStandardAssets._2D
 
             // Set the vertical animation
             m_Anim.SetFloat("vSpeed", m_Rigidbody2D.velocity.y);
-            //Debug.Log(m_Rigidbody2D.velocity.y);
             m_Anim.SetBool("FacingRight", m_FacingRight);
         }
-
 
         public void Move(float move, bool shield, bool jump, bool jump_2)
         {
             // If crouching, check to see if the character can stand up
-            if (!shield && m_Anim.GetBool("Shield"))
-            {
-                // If the character has a ceiling preventing them from standing up, keep them crouching
-                if (Physics2D.OverlapCircle(m_CeilingCheck.position, k_CeilingRadius, m_WhatIsGround))
-                {
-                    shield = true;
-                }
-            }
+            // if (!shield && m_Anim.GetBool("Shield"))
+            // {
+            //     // If the character has a ceiling preventing them from standing up, keep them crouching
+            //     if (Physics2D.OverlapCircle(m_CeilingCheck.position, k_CeilingRadius, m_WhatIsGround))
+            //     {
+            //         shield = true;
+            //     }
+            // }
 
             m_Anim.SetFloat("yPos", m_Rigidbody2D.position.y);
 
@@ -93,23 +80,19 @@ namespace UnityStandardAssets._2D
                 m_Anim.SetFloat("Speed", Mathf.Abs(move));
 
                 // Move the character
-                // m_Rigidbody2D.velocity = new Vector2(move*m_MaxSpeed, m_Rigidbody2D.velocity.y);
+                m_Rigidbody2D.velocity = new Vector2(move*m_MaxSpeed, m_Rigidbody2D.velocity.y);
 
-                transform.position += new Vector3(move, 0, 0) * Time.deltaTime * m_MaxSpeed;
-
-                // If moving right and facing left:
-                // if (move > 0 && !m_FacingRight)
-                // {
+                //If moving right and facing left:
+                if (move > 0 && !m_FacingRight)
+                {
                     
-                //     Flip();
-                // }
-                // // If moving left and facing right:
-                // else if (move < 0 && m_FacingRight)
-                // {
-                //     Flip();
-                // }
-                if(!Mathf.Approximately(0, move))
-                {transform.rotation = move > 0 ? Quaternion.Euler(0, 180, 0) : Quaternion.identity;}
+                    Flip();
+                }
+                // If moving left and facing right:
+                else if (move < 0 && m_FacingRight)
+                {
+                    Flip();
+                }
 
             }
             
@@ -156,28 +139,16 @@ namespace UnityStandardAssets._2D
 
         }
 
+        // Flip player depending on the way they are / should be facing.
         private void Flip()
         {
             // Switch the way the player is labelled as facing.
             m_FacingRight = !m_FacingRight;
-            // m_Anim.SetBool = ("Facing Right", m_FacingRight);
 
             // Multiply the player's x local scale by -1.
             Vector3 theScale = transform.localScale;
             theScale.x *= -1;
             transform.localScale = theScale;
-        }
-
-        public void Fire()
-        {
-            if(m_FacingRight)
-            {
-                Instantiate(projectilePrefabRight, LaunchOffsetRight.position, transform.rotation);
-            }
-            if(!m_FacingRight)
-            {
-                Instantiate(projectilePrefabLeft, LaunchOffsetLeft.position, transform.rotation);
-            }
         }
     }
 }
