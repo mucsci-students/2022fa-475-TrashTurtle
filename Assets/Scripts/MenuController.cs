@@ -11,6 +11,7 @@ public class MenuController : MonoBehaviour
     [Header("Volume Setting")]
     [SerializeField] private TMP_Text volumeTextValue = null;
     [SerializeField] private Slider volumeSlider = null;
+    [SerializeField] private float defaultVolume = 100;
 
 
     [Header("Confirmation")]
@@ -31,13 +32,26 @@ public class MenuController : MonoBehaviour
     public void setVolume(float volume)
     {
         AudioListener.volume = volume;
-        volumeTextValue.text = volume.ToString("0");
+        volumeTextValue.text = volume.ToString("0.0");
     }
 
     public void applySettings () 
     {
+        // Volume set
         PlayerPrefs.SetFloat("masterVolume", AudioListener.volume);
         StartCoroutine(ConfirmationBox());
+    }
+
+    public void resetSettings() 
+    {
+        // Volume reset
+        AudioListener.volume = defaultVolume;
+        volumeSlider.value = defaultVolume;
+        volumeTextValue.text = defaultVolume.ToString("0.0");
+
+
+        // Make sure to save these changes
+        applySettings();
     }
 
     public IEnumerator ConfirmationBox()
