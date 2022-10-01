@@ -8,11 +8,12 @@ namespace UnityStandardAssets._2D
         private PlatformerCharacter2D m_Character;
         private bool m_Jump_down;
         private bool m_Jump_button;
-
+        private bool fire;
 
         private void Awake()
         {
             m_Character = GetComponent<PlatformerCharacter2D>();
+            
         }
 
 
@@ -25,15 +26,20 @@ namespace UnityStandardAssets._2D
                 // m_Jump_button duration jump is pressed
                 m_Jump_button = Input.GetButton("Jump");
             }
-            // if(Input.GetButtonDown("Fire1"))
-            // {
-            //     Instantiate(projectilePrefab, LaunchOffset.position, transform.rotation);
-            // }
+            
+            if(Input.GetButtonDown("Fire1"))
+            {
+                m_Character.Fire();
+            }
+ 
         }
-
 
         private void FixedUpdate()
         {
+            if(Input.GetButtonDown("Fire1"))
+            {
+                fire = true;
+            }
             // Read the inputs.
             bool shield = Input.GetKey(KeyCode.S);
             float h = Input.GetAxis("Horizontal");
@@ -41,6 +47,7 @@ namespace UnityStandardAssets._2D
             m_Character.Move(h, shield, m_Jump_down, m_Jump_button);
             m_Jump_down = false;
             m_Jump_button = false;
+            fire = false;
         }
     }
 }

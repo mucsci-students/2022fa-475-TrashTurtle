@@ -20,14 +20,20 @@ namespace UnityStandardAssets._2D
         const float k_CeilingRadius = .01f;     // Radius of the overlap circle to determine if the player can stand up
         const float m_CrouchSpeed = 0f;         // Movement speed when crouched
         private bool m_Grounded;                // Whether or not the player is grounded.
-        public bool m_FacingRight = true;      // For determining which way the player is currently facing.
+        private bool m_FacingRight = true;      // For determining which way the player is currently facing.
         private bool isJumping;                 // Whether or not the player is in the air with jumpHoldDuration.
 
         public float jumpHoldDuration = 0.25f;  // Max duration to hold space and gain velocity.
         public float jumpHoldCounter;           // Control for jumpHoldDuration
         public float projectileSpeed = 4.5f;
-        public Transform LaunchOffset;
-        public ProjectileBehavior projectilePrefab;
+        // ProjectileBehaviorLeft projectilePrefabLeft;
+        // ProjectileBehaviorRight projectilePrefabRight;
+        public Transform LaunchOffsetLeft;
+        public Transform LaunchOffsetRight;
+        public ProjectileBehaviorLeft projectilePrefabLeft;
+        public ProjectileBehaviorRight projectilePrefabRight;
+        // LaunchOffsetLeft = transform.Find("LaunchOffsetLeft");
+        // LaunchOffsetRight = transform.Find("LaunchOffsetRight");
 
         private void Awake()
         {
@@ -36,12 +42,9 @@ namespace UnityStandardAssets._2D
             m_CeilingCheck = transform.Find("CeilingCheck");
             m_Anim = GetComponent<Animator>();
             m_Rigidbody2D = GetComponent<Rigidbody2D>();
+            // LaunchOffsetLeft = transform.Find("LaunchOffsetLeft");
+            // LaunchOffsetRight = transform.Find("LaunchOffsetRight");
         }
-
-        // public void fire()
-        // {
-        //     Instantiate(projectilePrefab, LaunchOffset.position, transform.rotation);
-        // }
 
         private void FixedUpdate()
         {
@@ -61,6 +64,7 @@ namespace UnityStandardAssets._2D
             // Set the vertical animation
             m_Anim.SetFloat("vSpeed", m_Rigidbody2D.velocity.y);
             //Debug.Log(m_Rigidbody2D.velocity.y);
+            m_Anim.SetBool("FacingRight", m_FacingRight);
         }
 
 
@@ -84,28 +88,31 @@ namespace UnityStandardAssets._2D
             //only control the player if grounded or airControl is turned on
             if (m_Grounded || m_AirControl)
             {
-                // If sheilding, cannot move.
-                move = (shield ? move*m_CrouchSpeed : move);
 
                 // The Speed animator parameter is set to the absolute value of the horizontal input.
                 m_Anim.SetFloat("Speed", Mathf.Abs(move));
 
                 // Move the character
-                m_Rigidbody2D.velocity = new Vector2(move*m_MaxSpeed, m_Rigidbody2D.velocity.y);
+                // m_Rigidbody2D.velocity = new Vector2(move*m_MaxSpeed, m_Rigidbody2D.velocity.y);
+
+                transform.position += new Vector3(move, 0, 0) * Time.deltaTime * m_MaxSpeed;
 
                 // If moving right and facing left:
-                if (move > 0 && !m_FacingRight)
-                {
-                    Flip();
+                // if (move > 0 && !m_FacingRight)
+                // {
+                    
+                //     Flip();
+                // }
+                // // If moving left and facing right:
+                // else if (move < 0 && m_FacingRight)
+                // {
+                //     Flip();
+                // }
+                if(!Mathf.Approximately(0, move))
+                {transform.rotation = move > 0 ? Quaternion.Euler(0, 180, 0) : Quaternion.identity;}
 
-                }
-                // If moving left and facing right:
-                else if (move < 0 && m_FacingRight)
-                {
-                    Flip();
-                }
             }
-
+            
             /**** Working static jump height (change jump force if not working)****/
             
             // if (m_Grounded && jump && m_Anim.GetBool("Ground"))
@@ -146,6 +153,7 @@ namespace UnityStandardAssets._2D
             }
             // No more jumping for you x2.
             if(!jump_2) { isJumping = false; }
+
         }
 
         private void Flip()
@@ -159,9 +167,17 @@ namespace UnityStandardAssets._2D
             theScale.x *= -1;
             transform.localScale = theScale;
         }
-        // public bool getFace()
-        // {
-        //     return m_FacingRight;
-        // }
+
+        public void Fire()
+        {
+            if(m_FacingRight)
+            {
+                Instantiate(projectilePrefabRight, LaunchOffsetRight.position, transform.rotation);
+            }
+            if(!m_FacingRight)
+            {
+                Instantiate(projectilePrefabLeft, LaunchOffsetLeft.position, transform.rotation);
+            }
+        }
     }
 }
