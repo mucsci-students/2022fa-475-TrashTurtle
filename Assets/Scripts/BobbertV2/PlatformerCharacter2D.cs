@@ -132,7 +132,10 @@ namespace UnityStandardAssets._2D
                     m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce *.75f));
                 }
                 // No more jumping for you.
-                else { isJumping = false; }
+                else { 
+                    isJumping = false;
+                    jumpHoldCounter = 0;
+                }
             }
             // No more jumping for you x2.
             if(!jump_2) { isJumping = false; }

@@ -16,10 +16,13 @@ public class Sling : MonoBehaviour
     public float spaceBetweenPoints;
     public float launchForce;
     public bool isLeft;
+    public bool showTrajectory;
     public int numberOfPoints;
 
     // Generates the prefab of opaque turtle shell a bunch of times.
     private void Start() {
+        showTrajectory = false;
+       
         points = new GameObject[numberOfPoints];
 
         for (int i = 0; i < numberOfPoints; i++)
@@ -37,11 +40,21 @@ public class Sling : MonoBehaviour
         Vector2 slingPosition = transform.position;
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
+        if(Input.GetMouseButtonDown(1)){
+            showTrajectory = !showTrajectory;
+        }
 
-        for(int i = 0; i < numberOfPoints; i++)
-            {
-                points[i].transform.position = PointPosition(i * spaceBetweenPoints);
-            }
+        if(showTrajectory){
+            for(int i = 0; i < numberOfPoints; i++){
+                 points[i].transform.position = PointPosition(i * spaceBetweenPoints);
+             }
+        }
+
+        // if(showTrajectory){
+        //     for(int i = 0; i < numberOfPoints; i++){
+        //         points[i].transform.position = PointPosition(i * spaceBetweenPoints);
+        //     }
+        // }
         
         if(player.transform.localScale.x == 1)
         {
