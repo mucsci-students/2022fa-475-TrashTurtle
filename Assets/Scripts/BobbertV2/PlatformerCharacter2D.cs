@@ -52,21 +52,20 @@ namespace UnityStandardAssets._2D
 
             // Set the vertical animation
             m_Anim.SetFloat("vSpeed", m_Rigidbody2D.velocity.y);
-            //Debug.Log(m_Rigidbody2D.velocity.y);
+            m_Anim.SetBool("FacingRight", m_FacingRight);
         }
-
 
         public void Move(float move, bool shield, bool jump, bool jump_2)
         {
             // If crouching, check to see if the character can stand up
-            if (!shield && m_Anim.GetBool("Shield"))
-            {
-                // If the character has a ceiling preventing them from standing up, keep them crouching
-                if (Physics2D.OverlapCircle(m_CeilingCheck.position, k_CeilingRadius, m_WhatIsGround))
-                {
-                    shield = true;
-                }
-            }
+            // if (!shield && m_Anim.GetBool("Shield"))
+            // {
+            //     // If the character has a ceiling preventing them from standing up, keep them crouching
+            //     if (Physics2D.OverlapCircle(m_CeilingCheck.position, k_CeilingRadius, m_WhatIsGround))
+            //     {
+            //         shield = true;
+            //     }
+            // }
 
             m_Anim.SetFloat("yPos", m_Rigidbody2D.position.y);
 
@@ -76,8 +75,6 @@ namespace UnityStandardAssets._2D
             //only control the player if grounded or airControl is turned on
             if (m_Grounded || m_AirControl)
             {
-                // If sheilding, cannot move.
-                move = (shield ? move*m_CrouchSpeed : move);
 
                 // The Speed animator parameter is set to the absolute value of the horizontal input.
                 m_Anim.SetFloat("Speed", Mathf.Abs(move));
@@ -85,9 +82,10 @@ namespace UnityStandardAssets._2D
                 // Move the character
                 m_Rigidbody2D.velocity = new Vector2(move*m_MaxSpeed, m_Rigidbody2D.velocity.y);
 
-                // If moving right and facing left:
+                //If moving right and facing left:
                 if (move > 0 && !m_FacingRight)
                 {
+                    
                     Flip();
                 }
                 // If moving left and facing right:
@@ -95,8 +93,9 @@ namespace UnityStandardAssets._2D
                 {
                     Flip();
                 }
-            }
 
+            }
+            
             /**** Working static jump height (change jump force if not working)****/
             
             // if (m_Grounded && jump && m_Anim.GetBool("Ground"))
@@ -137,8 +136,10 @@ namespace UnityStandardAssets._2D
             }
             // No more jumping for you x2.
             if(!jump_2) { isJumping = false; }
+
         }
 
+        // Flip player depending on the way they are / should be facing.
         private void Flip()
         {
             // Switch the way the player is labelled as facing.

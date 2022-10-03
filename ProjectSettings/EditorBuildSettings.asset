@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 267fdc89789ba8549af95f8ec68f0fad
+  - enabled: 1
+    path: Assets/Scenes/Level1.unity
+    guid: b8af4de4a98f0e7f8af282707b1794b6
+  - enabled: 1
     path: Assets/Scenes/BobbertTestScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}

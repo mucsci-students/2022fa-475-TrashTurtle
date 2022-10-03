@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ProjectileBehavior : MonoBehaviour
+public class ProjectileBehaviorRight : MonoBehaviour
 {
     public float speed = 4.5f;
+    
     // Update is called once per frame
     private void Update()
     {
@@ -13,6 +14,6 @@ public class ProjectileBehavior : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Destroy(gameObject);
+        Destroy(gameObject);        
     }
 }

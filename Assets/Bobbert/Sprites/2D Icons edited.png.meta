@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1786b34c9ffc31948900f032b28db503
+guid: 0ea033f35cb3438418c036affce862e2
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -33,12 +33,12 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
-    wrapU: 1
-    wrapV: 1
-    wrapW: 1
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -116,64 +116,64 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sling Sprite_0
+      name: 2D Icons edited_0
       rect:
         serializedVersion: 2
-        x: 360
-        y: 292
-        width: 51
-        height: 59
+        x: 355
+        y: 290
+        width: 64
+        height: 64
       alignment: 9
-      pivot: {x: 0.121228985, y: 0.090734966}
+      pivot: {x: 0.19448853, y: 0.12836075}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 123a1126e53090645b3965ac913b615e
-      internalID: -213360285
+      spriteID: 68fac47fd3ca9c440ab138b1345b6255
+      internalID: 1011346632
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sling Sprite_1
+      name: 2D Icons edited_1
       rect:
         serializedVersion: 2
-        x: 360
-        y: 225
-        width: 50
-        height: 58
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 353
+        y: 224
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.44804287, y: 0.5054698}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d27bbd946f2e164479e200705ee85b39
-      internalID: -940116431
+      spriteID: 02f34ac19f06d0a408f46d7bdb43dd3b
+      internalID: -581287940
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sling Sprite_2
+      name: 2D Icons edited_2
       rect:
         serializedVersion: 2
-        x: 361
-        y: 160
-        width: 49
-        height: 60
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 353
+        y: 159
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.4528246, y: 0.49637103}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2a1b8d3b2a92a4941a99fea0c3fe5083
-      internalID: -1016369927
+      spriteID: fa233e60c298fc74387678d218cb2577
+      internalID: 1251177857
       vertices: []
       indices: 
       edges: []
@@ -189,9 +189,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Sling Sprite_2: -1016369927
-      Sling Sprite_0: -213360285
-      Sling Sprite_1: -940116431
+      2D Icons edited_0: 1011346632
+      2D Icons edited_1: -581287940
+      2D Icons edited_2: -1262710075
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

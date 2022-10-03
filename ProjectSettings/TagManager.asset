@@ -14,7 +14,7 @@ TagManager:
   - UI
   - obstacle
   - 
-  - 
+  - Projectile
   - 
   - 
   - 
@@ -50,4 +50,7 @@ TagManager:
     locked: 0
   - name: enemy
     uniqueID: 739340127
+    locked: 0
+  - name: Projectile
+    uniqueID: 2677827373
     locked: 0
