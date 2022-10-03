@@ -48,6 +48,9 @@ TagManager:
   - name: plats
     uniqueID: 4188858527
     locked: 0
+  - name: Player
+    uniqueID: 3297136625
+    locked: 0
   - name: enemy
     uniqueID: 739340127
     locked: 0
