@@ -24,10 +24,11 @@ public class ShotHandler : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        Destroy(gameObject, deleteTimer);
-        // rb.velocity = Vector2.zero;
-        // rb.isKinematic = true;
+   private void OnCollisionEnter2D(Collision2D collision){
+
+
+        if(collision.gameObject.TryGetComponent<enemyBehavior>(out enemyBehavior health)){
+            health.TakeDamage(1);
+        }
     }
 }

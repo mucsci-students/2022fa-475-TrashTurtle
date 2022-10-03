@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BobbertHealth : MonoBehaviour
 {
@@ -19,7 +20,7 @@ public class BobbertHealth : MonoBehaviour
         health -= dmg;
         if(health <= 0)
         {
-            Destroy(gameObject);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 }

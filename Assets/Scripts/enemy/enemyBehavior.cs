@@ -6,7 +6,7 @@ public class enemyBehavior : MonoBehaviour
 {
 
     public float Hitpoints;
-    public float MaxHitpoints = 5;
+    public float MaxHitpoints = 20;
     public healthBar healthBar;
 
 
@@ -17,7 +17,7 @@ public class enemyBehavior : MonoBehaviour
         healthBar.SetHealth(Hitpoints, MaxHitpoints);
     }
 
-    public void TakeHit(float damage){
+    public void TakeDamage(int damage){
         Hitpoints -= damage;
         
         if(Hitpoints<= 0){
