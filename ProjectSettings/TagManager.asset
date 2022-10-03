@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - enemy
   layers:
   - Default
   - TransparentFX
@@ -11,7 +12,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - obstacle
   - 
   - Projectile
   - 
@@ -41,10 +42,13 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: clouds
+    uniqueID: 624909645
+    locked: 0
   - name: plats
     uniqueID: 4188858527
     locked: 0
-  - name: New Layer 2
+  - name: enemy
     uniqueID: 739340127
     locked: 0
   - name: Projectile
