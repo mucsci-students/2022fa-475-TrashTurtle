@@ -13,9 +13,8 @@ GameObject:
   - component: {fileID: 2597532589804898776}
   - component: {fileID: -1319146395304717115}
   - component: {fileID: 2418254615337412501}
-  - component: {fileID: 1512388794333296541}
   m_Layer: 8
-  m_Name: SlingAmmo
+  m_Name: SlingAmmo 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,8 +28,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8862918640480236475}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.530808, y: 2.0173278, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
+  m_LocalPosition: {x: -4.54078, y: 2.03657, z: 0}
+  m_LocalScale: {x: 0.38437226, y: 0.42098188, z: 0.4}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -74,15 +73,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-<<<<<<< Updated upstream
   m_SortingLayerID: -1617139923
-  m_SortingLayer: 4
-  m_SortingOrder: 1
-=======
-  m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
->>>>>>> Stashed changes
   m_Sprite: {fileID: -799129176, guid: 4284aa3e822973a4f8ee8588ab1ce12d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -143,17 +136,3 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.25
---- !u!114 &1512388794333296541
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8862918640480236475}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6ad224de79d7b847a2164750c916294, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 1
-  monsterHealth: {fileID: 6064137904823743444, guid: c9fdfc221b4e0fc4b93659ef5c452d05, type: 3}
