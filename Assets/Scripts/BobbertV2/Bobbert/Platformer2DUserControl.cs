@@ -36,6 +36,7 @@ namespace UnityStandardAssets._2D
             m_Character.Move(h, shield, m_Jump_down, m_Jump_button);
             m_Jump_down = false;
             m_Jump_button = false;
+            shield = false;
         }
     }
 }
