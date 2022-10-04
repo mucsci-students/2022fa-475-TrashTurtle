@@ -16,7 +16,4 @@ public class background : MonoBehaviour
             sideBG.position = midBG.position + Vector3.left * length;
         }
     }
-
-
-
 }
