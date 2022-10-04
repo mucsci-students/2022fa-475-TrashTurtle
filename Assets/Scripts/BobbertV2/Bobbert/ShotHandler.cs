@@ -24,7 +24,8 @@ public class ShotHandler : MonoBehaviour
         }
     }
 
-   private void OnCollisionEnter2D(Collision2D collision){
+    // Delete projectile if doesn't hit enemy
+    private void OnCollisionEnter2D(Collision2D collision){
         if (collision.gameObject.tag != "Enemy"){
             Destroy(gameObject, deleteTimer);
         }
