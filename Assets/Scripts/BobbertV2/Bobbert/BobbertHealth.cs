@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
 public class BobbertHealth : MonoBehaviour
 {
     public int maxHealth = 6;
@@ -20,7 +19,7 @@ public class BobbertHealth : MonoBehaviour
         health -= dmg;
         if(health <= 0)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 }

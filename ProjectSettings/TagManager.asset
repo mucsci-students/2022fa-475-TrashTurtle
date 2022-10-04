@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - enemy
+  - CrosshairPrefab
+  - Enemy
+  - GameManager
   layers:
   - Default
   - TransparentFX

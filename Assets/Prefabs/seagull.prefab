@@ -13,12 +13,12 @@ GameObject:
   - component: {fileID: 2548683139797800880}
   - component: {fileID: 2548683139797800886}
   - component: {fileID: 2548683139797800884}
-  - component: {fileID: 2548683139797800520}
-  - component: {fileID: 2548683139797800523}
   - component: {fileID: 2548683139797800885}
   - component: {fileID: 2548683139797800521}
   - component: {fileID: 2548683139797800883}
   - component: {fileID: 2548683139797800882}
+  - component: {fileID: 6341196576520095867}
+  - component: {fileID: 3938968700388378585}
   m_Layer: 6
   m_Name: seagull
   m_TagString: enemy
@@ -177,33 +177,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   target: {fileID: 6959451596162885214, guid: 674f371deb20e904eb6ea66c0e2f21a7, type: 3}
---- !u!114 &2548683139797800520
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2548683139797800894}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c325a76179e9a823caa317a0f5d88c48, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Hitpoints: 0
-  MaxHitpoints: 20
-  healthBar: {fileID: 1022141798896616613, guid: 2b9e9dc4f4a60044e8ba37ed088386eb, type: 3}
---- !u!114 &2548683139797800523
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2548683139797800894}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78e020489f10d24649e587ad4d05cccc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!58 &2548683139797800885
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -274,3 +247,29 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
+--- !u!114 &6341196576520095867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2548683139797800894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c083c9d8ca9f09c1a8c73b899b16920a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 6
+  health: 0
+--- !u!114 &3938968700388378585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2548683139797800894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc013833ea238c128b252f07f4a3988c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

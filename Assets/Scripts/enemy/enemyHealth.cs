@@ -4,23 +4,21 @@ using UnityEngine;
 
 public class enemyHealth : MonoBehaviour
 {
-
-    public float Hitpoints;
-    public float MaxHitpoints = 20;
-    public healthBar healthBar;
-
-
+    public int maxHealth = 6;
+    public int health;
+    
     // Start is called before the first frame update
     void Start()
     {
-        Hitpoints = MaxHitpoints;
-        healthBar.SetHealth(Hitpoints, MaxHitpoints);
+        health = maxHealth;
     }
 
-    public void TakeDamage(int damage){
-        Hitpoints -= damage;
-        
-        if(Hitpoints<= 0){
+    // Other enemies call this function
+    public void TakeDamage(int dmg)
+    {
+        health -= dmg;
+        if(health <= 0)
+        {
             Destroy(gameObject);
         }
     }
