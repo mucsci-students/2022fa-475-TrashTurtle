@@ -26,11 +26,11 @@ public class ShotHandler : MonoBehaviour
 
     // Delete projectile if doesn't hit enemy
     private void OnCollisionEnter2D(Collision2D collision){
-        if (collision.gameObject.tag != "Enemy"){
+        if (collision.gameObject.tag != "enemy"){
             Destroy(gameObject, deleteTimer);
         }else
         
-        if(collision.gameObject.TryGetComponent<enemyBehavior>(out enemyBehavior Health)){
+        if(collision.gameObject.TryGetComponent<enemyHealth>(out enemyHealth Health)){
             Health.TakeDamage(1);
         }
     }

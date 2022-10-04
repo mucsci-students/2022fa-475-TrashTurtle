@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class enemyBehavior : MonoBehaviour
+public class enemyHealth : MonoBehaviour
 {
 
     public float Hitpoints;
