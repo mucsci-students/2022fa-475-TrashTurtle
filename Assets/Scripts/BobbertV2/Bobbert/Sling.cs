@@ -18,10 +18,13 @@ public class Sling : MonoBehaviour
     public bool showTrajectory;         // Boolean to control them display of crosshair
     public bool shooty;
     public int numberOfPoints;          // Amount of of points to display in the array.
+    public bool isPaused;
+    public PauseMenu pauseMenu;
 
     // Generates the prefab of opaque turtle shell a bunch of times.
     private void Start() {
         showTrajectory = false;
+        isPaused = false;
        
         points = new GameObject[numberOfPoints];
 
@@ -37,6 +40,9 @@ public class Sling : MonoBehaviour
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         showTrajectory = Input.GetMouseButton(0);
 
+        isPaused = pauseMenu.GameIsPaused;
+
+        if (!isPaused){
         // If left click is held down
         if(showTrajectory)
         {
@@ -91,6 +97,7 @@ public class Sling : MonoBehaviour
                 }
             }
         }
+        }
 
         // Sanity check, fire and remove crosshair
         if(Input.GetMouseButtonUp(0))
@@ -106,10 +113,11 @@ public class Sling : MonoBehaviour
 
     // Pew pew time.
     void Shoot() {
-        showTrajectory = false;   
-        GameObject newShot = Instantiate(shot, shotPoint.position, shotPoint.rotation);
-        newShot.GetComponent<Rigidbody2D>().velocity = transform.right * launchForce;
-
+        if(!isPaused){
+            showTrajectory = false;   
+            GameObject newShot = Instantiate(shot, shotPoint.position, shotPoint.rotation);
+            newShot.GetComponent<Rigidbody2D>().velocity = transform.right * launchForce;
+        }
     }
 
     // Where to place the points showing the trajectory.

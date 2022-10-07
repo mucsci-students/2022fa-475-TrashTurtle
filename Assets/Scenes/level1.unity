@@ -330,7 +330,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 244863874}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 25.9584, y: -8.7577, z: 0}
+  m_LocalPosition: {x: 25.99, y: -8.79, z: 0}
   m_LocalScale: {x: 9.915961, y: 5.750562, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -905,6 +905,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &771233119 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2506459723202162369, guid: f9b32de065c3bbb45b980be83c6717d1, type: 3}
+  m_PrefabInstance: {fileID: 1284867912}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f96f8bbf3b8359746b6ace23d1d3e482, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &832695608
 GameObject:
   m_ObjectHideFlags: 0
@@ -1159,6 +1170,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1700857711150375620, guid: 674f371deb20e904eb6ea66c0e2f21a7, type: 3}
+      propertyPath: pauseMenu
+      value: 
+      objectReference: {fileID: 771233119}
     - target: {fileID: 6959451596162885214, guid: 674f371deb20e904eb6ea66c0e2f21a7, type: 3}
       propertyPath: m_RootOrder
       value: 16

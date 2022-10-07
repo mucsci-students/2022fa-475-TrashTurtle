@@ -11,7 +11,7 @@ namespace UnityStandardAssets._2D
 
         private void Awake()
         {
-            m_Character = GetComponent<PlatformerCharacter2D>();   
+            m_Character = GetComponent<PlatformerCharacter2D>();
         }
 
 
@@ -31,7 +31,7 @@ namespace UnityStandardAssets._2D
             // Read the inputs.
             bool shield = Input.GetKey(KeyCode.S);
             float h = Input.GetAxis("Horizontal");
-            
+                  
             // Pass all parameters to the character control script.
             m_Character.Move(h, shield, m_Jump_down, m_Jump_button);
             m_Jump_down = false;
