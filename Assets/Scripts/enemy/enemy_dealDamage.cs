@@ -9,7 +9,7 @@ public class enemy_dealDamage : MonoBehaviour
 
         
         if(collision.gameObject.TryGetComponent<BobbertHealth>(out BobbertHealth health)){
-            health.TakeDamage(1);
+            health.UpdateHealth(-1);
         }
     }
 }

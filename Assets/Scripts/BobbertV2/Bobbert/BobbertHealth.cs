@@ -15,12 +15,24 @@ public class BobbertHealth : MonoBehaviour
     }
 
     // Other enemies call this function
-    public void TakeDamage(int dmg)
+    // Also will be used by scissors !
+    public void UpdateHealth(int mod)
     {
-        health -= dmg;
-        if(health <= 0)
+        health += mod;
+
+        if (health > maxHealth)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            health = maxHealth;
+        } else if (health <= 0)
+        {
+            health = 0;
+            PlayerDied();
         }
+    }
+
+    private void PlayerDied()
+    {
+        LevelManager.instance.GameOver();
+        gameObject.SetActive(false);
     }
 }
