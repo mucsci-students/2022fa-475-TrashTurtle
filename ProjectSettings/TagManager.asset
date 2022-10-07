@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - enemy
+  - CrosshairPrefab
+  - Ground
   layers:
   - Default
   - TransparentFX
@@ -42,16 +44,16 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: clouds
+  - name: Clouds
     uniqueID: 624909645
     locked: 0
-  - name: plats
+  - name: Platforms
     uniqueID: 4188858527
     locked: 0
   - name: Player
     uniqueID: 3297136625
     locked: 0
-  - name: enemy
+  - name: Enemy
     uniqueID: 739340127
     locked: 0
   - name: Projectile
