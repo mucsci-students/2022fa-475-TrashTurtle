@@ -116,9 +116,9 @@ MonoBehaviour:
   point: {fileID: 36508973774058487, guid: 193a430c9a379aa4fa248a405b78f15e, type: 3}
   numberOfPoints: 15
   spaceBetweenPoints: 0.025
-  launchForce: 15
+  launchForce: 17
   showTrajectory: 0
-  shootCooldown: 0.25
+  shootCooldown: 0.2
   spriteTimer: 0
   didShoot: 0
   cooldownImage: {fileID: 0}
@@ -394,7 +394,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 6646a31b7c1a6604c9424051c2acbb51, type: 3}
   - {fileID: 8300000, guid: 471c71ee0e1d60547a65063b1d9b8c47, type: 3}
   - {fileID: 8300000, guid: 0902181951bfa8a449829695d1f18b1b, type: 3}
-  dead: {fileID: 0}
   volumeChangeMultiplier: 0.372
 --- !u!1 &6959451596406334563
 GameObject:

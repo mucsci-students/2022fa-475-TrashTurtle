@@ -592,7 +592,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1753412032}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f839269fce04975fea7ba9dfe4fa30b6, type: 3}
   m_Name: 
@@ -826,6 +826,10 @@ PrefabInstance:
       propertyPath: pauseMenu
       value: 
       objectReference: {fileID: 1301194103}
+    - target: {fileID: 1700857711150375620, guid: 674f371deb20e904eb6ea66c0e2f21a7, type: 3}
+      propertyPath: cooldownImage
+      value: 
+      objectReference: {fileID: 3164379580937400908, guid: 7569c153ced3390419f436fa20d738f4, type: 3}
     - target: {fileID: 1700857711150375622, guid: 674f371deb20e904eb6ea66c0e2f21a7, type: 3}
       propertyPath: m_Layer
       value: 23
