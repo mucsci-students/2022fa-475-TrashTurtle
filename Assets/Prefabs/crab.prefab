@@ -310,6 +310,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c325a76179e9a823caa317a0f5d88c48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colorChangeTimer: 0
   Hitpoints: 0
   MaxHitpoints: 5
   healthBar: {fileID: 0}
@@ -682,8 +683,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c325a76179e9a823caa317a0f5d88c48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colorChangeTimer: 0
   Hitpoints: 0
-  MaxHitpoints: 20
+  MaxHitpoints: 10
   healthBar: {fileID: 5347643861575981940}
 --- !u!114 &5347643862239379440
 MonoBehaviour:
