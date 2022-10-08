@@ -6,25 +6,22 @@ TagManager:
   tags:
   - enemy
   - CrosshairPrefab
-<<<<<<< Updated upstream
   - Ground
-=======
   - Enemy
->>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
-  - Ignore Raycast
-  - 
+  - Ignore Raycast 
   - Water
   - UI
   - obstacle
-  - 
   - Projectile
   - 
   - 
-  - Player
-  - cam
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 
