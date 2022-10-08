@@ -11,8 +11,8 @@ public class BobbertHealth : MonoBehaviour
     Color defaultColor;
     bool isHit = false;
     public float colorChangeTimer;
+    //public AudioSource audioSource;
     public OwRandom ow;
-    public HealthController hp;
 
     // Start is called before the first frame update
     void Start()
@@ -32,6 +32,7 @@ public class BobbertHealth : MonoBehaviour
             if(!isHit)
             {
                 isHit = true;
+                //audioSource.PlayOneShot(audioSource.clip);
                 ow.Hurt();
                 // Idk how to explain Coroutine. But we can run a function as if it were in Update()
                 StartCoroutine("Flash");
@@ -39,8 +40,6 @@ public class BobbertHealth : MonoBehaviour
         }
 
         health += mod;
-        
-        hp.LifeBar(health);
 
         if (health > maxHealth)
         {

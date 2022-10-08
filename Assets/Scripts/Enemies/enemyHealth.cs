@@ -12,6 +12,7 @@ public class enemyHealth : MonoBehaviour
     public float MaxHitpoints = 20;
     public healthBar healthBar;
 
+
     // Start is called before the first frame update
     void Start()
     {
