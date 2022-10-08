@@ -63,20 +63,18 @@ public class Sling : MonoBehaviour
         spriteTimer = shootCooldown;
         
         // Bobbert facing right && mouse is in a 90 degree arc in front of him.
-        if(faceRight && mousePos.x > player.transform.position.x && mousePos.y > player.transform.position.y)
+        if(faceRight && mousePos.x > player.transform.position.x)
             {canShootRight = true;}
         else
             {canShootRight = false;}
-        
-        //Debug.Log(canShootLeft  + " shoot left");
 
+        //if(!faceRight && mousePos.x < player.transform.position.x && mousePos.y > player.transform.position.y)
+        
         // Bobbert facing left and mouse is in a 90 degree arc in front of him.
-        if(!faceRight && mousePos.x < player.transform.position.x && mousePos.y > player.transform.position.y)
+        if(!faceRight && mousePos.x < player.transform.position.x)
             {canShootLeft = true;}
         else
             {canShootLeft = false;}
-
-        //Debug.Log(canShootLeft  + " shoot left");
 
         if(canShootLeft || canShootRight)
         {
@@ -120,11 +118,19 @@ public class Sling : MonoBehaviour
             }
         }
 
+        // If mouse moves out of shooting position
+        if(Input.GetMouseButtonUp(0))
+        {
+            for(int i = 0; i < numberOfPoints; i++)
+            {
+                points[i].transform.position = HideTrajectory(i * 0);
+            }  
+        }
+
     }
 
     // Pew pew time.
     void Shoot() {
-        
         if (!isPaused && !isShielded){
             // give me the good pew
             audioSource.PlayOneShot(audioSource.clip);
