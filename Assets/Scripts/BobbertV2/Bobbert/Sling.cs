@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Sling : MonoBehaviour
 {           
@@ -27,6 +28,11 @@ public class Sling : MonoBehaviour
 
     private bool canShootRight;         // Allowed to shoot right.
     private bool canShootLeft;          // Allowed to shoot left.
+    public float shootCooldown = 0.5f;
+    private float nextFireTime = 0f;
+    public float spriteTimer;
+    public bool didShoot;
+    public Image cooldownImage;
 
     // Generates the prefab of opaque turtle shell a bunch of times.
     private void Start() {
@@ -34,6 +40,7 @@ public class Sling : MonoBehaviour
         isPaused = false;
         canShootLeft = false;
         canShootRight = false;
+        didShoot = false;
         anim = player.GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
 
@@ -53,17 +60,8 @@ public class Sling : MonoBehaviour
         isPaused = pauseMenu.GameIsPaused;
         isShielded = anim.GetBool("Shield");
         faceRight = anim.GetBool("FacingRight");
+        spriteTimer = shootCooldown;
         
-        // If left click is held down
-        if(showTrajectory)
-        {
-            // Display crosshair
-            for(int i = 0; i < numberOfPoints; i++)
-            {
-                points[i].transform.position = PointPosition(i * spaceBetweenPoints);
-            }
-        }
-
         // Bobbert facing right && mouse is in a 90 degree arc in front of him.
         if(faceRight && mousePos.x > player.transform.position.x && mousePos.y > player.transform.position.y)
             {canShootRight = true;}
@@ -82,21 +80,45 @@ public class Sling : MonoBehaviour
 
         if(canShootLeft || canShootRight)
         {
+            // If left click is held down
+            if(showTrajectory)
+            {
+                // Display crosshair
+                for(int i = 0; i < numberOfPoints; i++)
+                {
+                    points[i].transform.position = PointPosition(i * spaceBetweenPoints);
+                }
+            }
             direction = mousePos - slingPosition;
             transform.right = direction;
-            
-            // If left click is released
-            if(Input.GetMouseButtonUp(0))
+        
+            if(Time.time > nextFireTime)
             {
-                Shoot();  
-                
+                // If left click is released
+                if(Input.GetMouseButtonUp(0))
+                {
+                    Shoot();
+                    nextFireTime = Time.time + shootCooldown;
+                }
+
+            }else{
                 // Hide crosshair.
                 for(int i = 0; i < numberOfPoints; i++)
                 {
                     points[i].transform.position = HideTrajectory(i * 0);
-                }
+                }  
             }
-        }    
+        }
+        if(didShoot)
+        {
+            cooldownImage.fillAmount -= 1.0f / spriteTimer * Time.deltaTime;
+            if(cooldownImage.fillAmount <= 0)
+            {
+                cooldownImage.fillAmount = 1.0f;
+                didShoot = false;
+            }
+        }
+
     }
 
     // Pew pew time.
@@ -107,6 +129,7 @@ public class Sling : MonoBehaviour
             audioSource.PlayOneShot(audioSource.clip);
             GameObject newShot = Instantiate(shot, shotPoint.position, shotPoint.rotation);
             newShot.GetComponent<Rigidbody2D>().velocity = transform.right * launchForce;
+            didShoot = true;
         }
     }
 

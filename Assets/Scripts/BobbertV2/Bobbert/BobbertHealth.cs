@@ -7,6 +7,7 @@ public class BobbertHealth : MonoBehaviour
 {
     public int maxHealth = 6;
     public int health;
+    // public SpriteRenderer sprite;
     
     // Start is called before the first frame update
     void Start()
@@ -19,6 +20,16 @@ public class BobbertHealth : MonoBehaviour
     public void UpdateHealth(int mod)
     {
         health += mod;
+
+        // sprite.color = Color.red;
+
+        // float emission = Mathf.PingPong (Time.time, 1.0f);
+        // Color baseColor = Color.yellow; //Replace this with whatever you want for your base color at emission level '1'
+ 
+        // Color finalColor = baseColor * Mathf.LinearToGammaSpace (emission);
+ 
+        // Color.finalColor;
+
 
         if (health > maxHealth)
         {

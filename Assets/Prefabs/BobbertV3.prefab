@@ -118,6 +118,10 @@ MonoBehaviour:
   spaceBetweenPoints: 0.025
   launchForce: 15
   showTrajectory: 0
+  shootCooldown: 0.5
+  spriteTimer: 0
+  didShoot: 0
+  cooldownImage: {fileID: 0}
 --- !u!82 &392183799
 AudioSource:
   m_ObjectHideFlags: 0
