@@ -6,7 +6,11 @@ TagManager:
   tags:
   - enemy
   - CrosshairPrefab
+<<<<<<< Updated upstream
   - Ground
+=======
+  - Enemy
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
@@ -19,7 +23,7 @@ TagManager:
   - Projectile
   - 
   - 
-  - 
+  - Player
   - cam
   - 
   - 

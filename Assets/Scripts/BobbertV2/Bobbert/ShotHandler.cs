@@ -28,9 +28,9 @@ public class ShotHandler : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision){
         if (collision.gameObject.tag != "enemy"){
             Destroy(gameObject, deleteTimer);
-        }else
+        }
         
-        if(collision.gameObject.TryGetComponent<enemyHealth>(out enemyHealth Health)){
+        else if(collision.gameObject.TryGetComponent<enemyHealth>(out enemyHealth Health)){
             Health.TakeDamage(1);
         }
     }

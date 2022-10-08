@@ -3,29 +3,40 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Sling : MonoBehaviour
-{ 
-    Transform firstChild;
-    Vector3 changeScale;
-    Vector2 direction;
+{           
+    Vector2 direction;                  // Direction of shot.
     GameObject[] points;                // Array of points to display prefab crosshair.
-    
-    public Transform shotPoint;         // The transform that shells appear from on Bobbert
-    public GameObject shot;             // SlingAmmo prefab
-    public GameObject player;           // Bobbert
-    public GameObject point;            // Where the shot will land
-    public float spaceBetweenPoints;    // Distance between points along the trajectory
-    public float launchForce;           // speed of projectile
-    public bool showTrajectory;         // Boolean to control them display of crosshair
-    public bool shooty;
+
+    public PauseMenu pauseMenu;         // Detect if game is paused to prevent shooting.
+    private bool isPaused;
+
+    private Animator anim;              // Get direction Bobbert is facing and if shielding.
+    private bool faceRight;             // Facing right?
+    private bool isShielded;            // Shielding?
+
+    public AudioSource audioSource;     // pew pew sound
+    public Transform shotPoint;         // The transform that shells appear from on Bobbert.
+    public GameObject shot;             // SlingAmmo prefab.
+    public GameObject player;           // Bobbert.
+    public GameObject point;            // Where the shot will land.
+
     public int numberOfPoints;          // Amount of of points to display in the array.
-    public bool isPaused;
-    public PauseMenu pauseMenu;
+    public float spaceBetweenPoints;    // Distance between points along the trajectory.
+    public float launchForce;           // Speed of projectile.
+    public bool showTrajectory;         // Boolean to control the display of the crosshair.
+
+    private bool canShootRight;         // Allowed to shoot right.
+    private bool canShootLeft;          // Allowed to shoot left.
 
     // Generates the prefab of opaque turtle shell a bunch of times.
     private void Start() {
         showTrajectory = false;
         isPaused = false;
-       
+        canShootLeft = false;
+        canShootRight = false;
+        anim = player.GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
+
         points = new GameObject[numberOfPoints];
 
         for (int i = 0; i < numberOfPoints; i++)
@@ -39,10 +50,10 @@ public class Sling : MonoBehaviour
         Vector2 slingPosition = transform.position;
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         showTrajectory = Input.GetMouseButton(0);
-
         isPaused = pauseMenu.GameIsPaused;
-
-        if (!isPaused){
+        isShielded = anim.GetBool("Shield");
+        faceRight = anim.GetBool("FacingRight");
+        
         // If left click is held down
         if(showTrajectory)
         {
@@ -51,70 +62,49 @@ public class Sling : MonoBehaviour
             {
                 points[i].transform.position = PointPosition(i * spaceBetweenPoints);
             }
-            // if bobbert is facing right
-            if(player.transform.localScale.x == 1) 
-            {
-                // Check the (x,y) coordinates of the mouse are to the right of bobbert.
-                if(mousePos.x > player.transform.position.x && mousePos.y > player.transform.position.y)
-                {   
-                    // Aim the shot at the cursor location
-                    direction = mousePos - slingPosition;
-                    transform.right = direction;
-
-                    // If left click is released
-                    if(Input.GetMouseButtonUp(0))
-                    {
-                        Shoot();
-                        // Hide crosshair.
-                        for(int i = 0; i < numberOfPoints; i++)
-                        {
-                            points[i].transform.position = HideTrajectory(i * 0);
-                        }
-                    }
-                }
-            }
-
-            // If Bobbert is facing left
-            if(player.transform.localScale.x == -1)
-            {        
-                // Check the (x,y) coordinates of the mouse are to the left of bobbert.
-                if(mousePos.x < player.transform.position.x && mousePos.y > player.transform.position.y)
-                {
-                    // Aim the shot at the cursor location
-                    direction = mousePos - slingPosition;
-                    transform.right = direction;
-                    
-                    // If left click is released
-                    if(Input.GetMouseButtonUp(0))
-                    {
-                        Shoot();
-                        // Hide crosshair.
-                        for(int i = 0; i < numberOfPoints; i++)
-                        {
-                            points[i].transform.position = HideTrajectory(i * 0);
-                        }
-                    }
-                }
-            }
-        }
         }
 
-        // Sanity check, fire and remove crosshair
-        if(Input.GetMouseButtonUp(0))
+        // Bobbert facing right && mouse is in a 90 degree arc in front of him.
+        if(faceRight && mousePos.x > player.transform.position.x && mousePos.y > player.transform.position.y)
+            {canShootRight = true;}
+        else
+            {canShootRight = false;}
+        
+        //Debug.Log(canShootLeft  + " shoot left");
+
+        // Bobbert facing left and mouse is in a 90 degree arc in front of him.
+        if(!faceRight && mousePos.x < player.transform.position.x && mousePos.y > player.transform.position.y)
+            {canShootLeft = true;}
+        else
+            {canShootLeft = false;}
+
+        //Debug.Log(canShootLeft  + " shoot left");
+
+        if(canShootLeft || canShootRight)
         {
-            Shoot();
-            // Hide crosshair.
-            for(int i = 0; i < numberOfPoints; i++)
+            direction = mousePos - slingPosition;
+            transform.right = direction;
+            
+            // If left click is released
+            if(Input.GetMouseButtonUp(0))
             {
-                points[i].transform.position = HideTrajectory(i * 0);
+                Shoot();  
+                
+                // Hide crosshair.
+                for(int i = 0; i < numberOfPoints; i++)
+                {
+                    points[i].transform.position = HideTrajectory(i * 0);
+                }
             }
-        }
+        }    
     }
 
     // Pew pew time.
     void Shoot() {
-        if(!isPaused){
-            showTrajectory = false;   
+        
+        if (!isPaused && !isShielded){
+            // give me the good pew
+            audioSource.PlayOneShot(audioSource.clip);
             GameObject newShot = Instantiate(shot, shotPoint.position, shotPoint.rotation);
             newShot.GetComponent<Rigidbody2D>().velocity = transform.right * launchForce;
         }
@@ -134,5 +124,4 @@ public class Sling : MonoBehaviour
         Vector2 position = (Vector2)shotPoint.position* -500 + (0*direction.normalized * launchForce * t)*0f * Physics2D.gravity * (t * 0);
         return position;
     }
-
 }
