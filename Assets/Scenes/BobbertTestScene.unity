@@ -830,6 +830,18 @@ PrefabInstance:
       propertyPath: pauseMenu
       value: 
       objectReference: {fileID: 1301194103}
+    - target: {fileID: 1700857711150375622, guid: 674f371deb20e904eb6ea66c0e2f21a7, type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 1700857711150375622, guid: 674f371deb20e904eb6ea66c0e2f21a7, type: 3}
+      propertyPath: m_TagString
+      value: CrosshairPrefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 1700857711196705583, guid: 674f371deb20e904eb6ea66c0e2f21a7, type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     - target: {fileID: 6959451596162885214, guid: 674f371deb20e904eb6ea66c0e2f21a7, type: 3}
       propertyPath: m_RootOrder
       value: 1
