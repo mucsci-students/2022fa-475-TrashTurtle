@@ -12,7 +12,7 @@ namespace UnityStandardAssets._2D
         [SerializeField] private LayerMask m_WhatIsGround;                  // A mask determining what is ground to the character
 
         private Animator m_Anim;                // Reference to the player's animator.
-        private Rigidbody2D m_Rigidbody2D;      // Reference to the player's animator.
+        private Rigidbody2D m_Rigidbody2D;      // Reference to the player's Rigidbody.
         private Transform m_GroundCheck;        // A position marking where to check if the player is grounded.
         private Transform m_CeilingCheck;       // A position marking where to check for ceilings
 
@@ -58,14 +58,14 @@ namespace UnityStandardAssets._2D
         public void Move(float move, bool shield, bool jump, bool jump_2)
         {
             // If crouching, check to see if the character can stand up
-            if (!shield && m_Anim.GetBool("Shield"))
-            {
-                // If the character has a ceiling preventing them from standing up, keep them crouching
-                if (Physics2D.OverlapCircle(m_CeilingCheck.position, k_CeilingRadius, m_WhatIsGround))
-                {
-                    shield = true;
-                }
-            }
+            // if (!shield && m_Anim.GetBool("Shield"))
+            // {
+            //     // If the character has a ceiling preventing them from standing up, keep them crouching
+            //     if (Physics2D.OverlapCircle(m_CeilingCheck.position, k_CeilingRadius, m_WhatIsGround))
+            //     {
+            //         shield = true;
+            //     }
+            // }
 
             m_Anim.SetFloat("yPos", m_Rigidbody2D.position.y);
 
@@ -132,7 +132,7 @@ namespace UnityStandardAssets._2D
                 {
                     // Reduce timer and jump
                     jumpHoldCounter -= Time.deltaTime;
-                    m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce *.75f));
+                    m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce *.95f));
                 }
                 // No more jumping for you.
                 else { 
@@ -142,7 +142,6 @@ namespace UnityStandardAssets._2D
             }
             // No more jumping for you x2.
             if(!jump_2) { isJumping = false; }
-
         }
 
         // Flip player depending on the way they are / should be facing.

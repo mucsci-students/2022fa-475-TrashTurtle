@@ -72,7 +72,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1700857711150375621}
   - component: {fileID: 1700857711150375620}
-  m_Layer: 0
+  - component: {fileID: 392183799}
+  m_Layer: 8
   m_Name: Sling
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,15 +108,112 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a3ae48dc9e00c44cb8e139630b02bc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pauseMenu: {fileID: 0}
+  audioSource: {fileID: 913141555}
   shotPoint: {fileID: 1700857711196705582}
   shot: {fileID: 8862918640480236475, guid: 6c1d09795c6360c49ade9982f0f9c015, type: 3}
   player: {fileID: 6959451597634623166}
   point: {fileID: 36508973774058487, guid: 193a430c9a379aa4fa248a405b78f15e, type: 3}
+  numberOfPoints: 15
   spaceBetweenPoints: 0.025
   launchForce: 15
   showTrajectory: 0
-  shooty: 0
-  numberOfPoints: 20
+--- !u!82 &392183799
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700857711150375622}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 1b971984c090f574f9c68d7d11eec3af, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1700857711196705583
 GameObject:
   m_ObjectHideFlags: 0
@@ -125,7 +223,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1700857711196705582}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ShotPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -227,7 +325,8 @@ GameObject:
   - component: {fileID: 6959451597634623136}
   - component: {fileID: 6959451597634623167}
   - component: {fileID: 913141555}
-  m_Layer: 0
+  - component: {fileID: 1271449268}
+  m_Layer: 11
   m_Name: BobbertV3
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -281,12 +380,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_MaxSpeed: 5
-  m_JumpForce: 40
+  m_JumpForce: 48
   m_AirControl: 1
   m_WhatIsGround:
     serializedVersion: 2
     m_Bits: 4294967295
-  jumpHoldDuration: 0.4
+  jumpHoldDuration: 0.2
   jumpHoldCounter: 0
 --- !u!114 &6959451597634623138
 MonoBehaviour:
@@ -521,3 +620,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1271449268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6959451597634623166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6ad224de79d7b847a2164750c916294, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+  monsterHealth: {fileID: 0}
