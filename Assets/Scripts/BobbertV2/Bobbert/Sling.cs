@@ -109,6 +109,7 @@ public class Sling : MonoBehaviour
                 }  
             }
         }
+        
         if(didShoot)
         {
             cooldownImage.fillAmount -= 1.0f / spriteTimer * Time.deltaTime;

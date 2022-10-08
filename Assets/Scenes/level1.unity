@@ -2056,6 +2056,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &886279357 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7514737286582647262, guid: 674f371deb20e904eb6ea66c0e2f21a7, type: 3}
+  m_PrefabInstance: {fileID: 913141552}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bff78109aa406fa4bbf9a07df59b669e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &892737732
 GameObject:
   m_ObjectHideFlags: 0
@@ -2158,6 +2169,10 @@ PrefabInstance:
       propertyPath: cooldownImage
       value: 
       objectReference: {fileID: 1872684834}
+    - target: {fileID: 1700857711150375620, guid: 674f371deb20e904eb6ea66c0e2f21a7, type: 3}
+      propertyPath: shootCooldown
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 6959451596162885214, guid: 674f371deb20e904eb6ea66c0e2f21a7, type: 3}
       propertyPath: m_RootOrder
       value: 21
@@ -2205,6 +2220,10 @@ PrefabInstance:
     - target: {fileID: 6959451597634623166, guid: 674f371deb20e904eb6ea66c0e2f21a7, type: 3}
       propertyPath: m_Name
       value: BobbertV3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7514737286582647262, guid: 674f371deb20e904eb6ea66c0e2f21a7, type: 3}
+      propertyPath: volumeChangeMultiplier
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 674f371deb20e904eb6ea66c0e2f21a7, type: 3}
@@ -2329,6 +2348,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2548683139797800884, guid: 96ad8b2abd44d1b46bc7b72d7237f880, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 913141554}
     - target: {fileID: 2548683139797800894, guid: 96ad8b2abd44d1b46bc7b72d7237f880, type: 3}
       propertyPath: m_Name
       value: seagull (2)
@@ -2558,6 +2581,10 @@ PrefabInstance:
       propertyPath: m_BodyType
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2548683139797800884, guid: 96ad8b2abd44d1b46bc7b72d7237f880, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 913141554}
     - target: {fileID: 2548683139797800894, guid: 96ad8b2abd44d1b46bc7b72d7237f880, type: 3}
       propertyPath: m_Name
       value: seagull (4)
@@ -2615,6 +2642,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2548683139797800884, guid: 96ad8b2abd44d1b46bc7b72d7237f880, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 913141554}
     - target: {fileID: 2548683139797800894, guid: 96ad8b2abd44d1b46bc7b72d7237f880, type: 3}
       propertyPath: m_Name
       value: seagull (1)
@@ -3313,6 +3344,10 @@ PrefabInstance:
       propertyPath: m_BodyType
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2548683139797800884, guid: 96ad8b2abd44d1b46bc7b72d7237f880, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 913141554}
     - target: {fileID: 2548683139797800894, guid: 96ad8b2abd44d1b46bc7b72d7237f880, type: 3}
       propertyPath: m_Name
       value: seagull
@@ -3449,6 +3484,102 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3025890634068263735, guid: d79cce0db5039c54694d3db1092dba6f, type: 3}
   m_PrefabInstance: {fileID: 3025890632454765453}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &1618475199
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1618475194}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1.65
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1638756193
 GameObject:
   m_ObjectHideFlags: 0
@@ -3924,6 +4055,10 @@ PrefabInstance:
       propertyPath: m_BodyType
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2548683139797800884, guid: 96ad8b2abd44d1b46bc7b72d7237f880, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 913141554}
     - target: {fileID: 2548683139797800894, guid: 96ad8b2abd44d1b46bc7b72d7237f880, type: 3}
       propertyPath: m_Name
       value: seagull (5)
@@ -3981,6 +4116,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2548683139797800884, guid: 96ad8b2abd44d1b46bc7b72d7237f880, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 913141554}
     - target: {fileID: 2548683139797800894, guid: 96ad8b2abd44d1b46bc7b72d7237f880, type: 3}
       propertyPath: m_Name
       value: seagull (3)
@@ -38527,6 +38666,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c325a76179e9a823caa317a0f5d88c48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colorChangeTimer: 0
   Hitpoints: 0
   MaxHitpoints: 20
   healthBar: {fileID: 1022141798896616613, guid: 2b9e9dc4f4a60044e8ba37ed088386eb, type: 3}
