@@ -3,7 +3,7 @@ guid: 8b6ec80d937fb8cad933236b3aab856f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 12
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -63,7 +63,6 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
-  cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -1198,7 +1197,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Crab 1_8: 858639357
+      Crab 1_16: 119189612
       Crab 1_30: 1610002237
       Crab 1_29: -2088595862
       Crab 1_35: 834941876
@@ -1230,12 +1229,12 @@ TextureImporter:
       Crab 1_34: 631290992
       Crab 1_28: -7228266
       Crab 1_10: 709104041
-      Crab 1_15: -1644650689
+      Crab 1_17: 1202047230
       Crab 1_14: 1829942511
       Crab 1_40: 1530326793
-      Crab 1_17: 1202047230
-      Crab 1_48: 56316777
       Crab 1_50: -1569413432
+      Crab 1_15: -1644650689
+      Crab 1_48: 56316777
       Crab 1_26: -1574308608
       Crab 1_45: 756439619
       Crab 1_11: -1814369237
@@ -1248,7 +1247,7 @@ TextureImporter:
       Crab 1_0: 1478839658
       Crab 1_19: 178409788
       Crab 1_33: 2099165049
-      Crab 1_16: 119189612
+      Crab 1_8: 858639357
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

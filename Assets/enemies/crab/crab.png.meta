@@ -3,7 +3,7 @@ guid: e1b5a1a164302b7919d46e27cc14e56e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 12
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -63,7 +63,6 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
-  cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -1267,7 +1266,7 @@ TextureImporter:
       crab_39: 566951219
       crab_50: 1190772097
       crab_46: 1923735770
-      crab_53: -1103505769
+      crab_15: 395998952
       crab_21: -295576229
       crab_33: 1320118024
       crab_36: -894586332
@@ -1314,7 +1313,7 @@ TextureImporter:
       crab_45: 1410982372
       crab_23: -1147090554
       crab_31: 1772995141
-      crab_15: 395998952
+      crab_53: -1103505769
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
