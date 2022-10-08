@@ -118,10 +118,10 @@ MonoBehaviour:
   spaceBetweenPoints: 0.025
   launchForce: 15
   showTrajectory: 0
-  shootCooldown: 0.5
+  shootCooldown: 0.25
   spriteTimer: 0
   didShoot: 0
-  cooldownImage: {fileID: 3164379580937400908, guid: 7569c153ced3390419f436fa20d738f4, type: 3}
+  cooldownImage: {fileID: 0}
 --- !u!82 &392183799
 AudioSource:
   m_ObjectHideFlags: 0
@@ -371,7 +371,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 7
   health: 0
-  sprite: {fileID: 0}
+  colorChangeTimer: 0
 --- !u!114 &6959451597634623139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -541,7 +541,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 22daa654bcbc93a7f8df2dcac68c0237, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0

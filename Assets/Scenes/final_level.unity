@@ -648,17 +648,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 913141555, guid: 674f371deb20e904eb6ea66c0e2f21a7, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1700857711150375620, guid: 674f371deb20e904eb6ea66c0e2f21a7, type: 3}
+      propertyPath: pauseMenu
+      value: 
+      objectReference: {fileID: 2138560193}
+    - target: {fileID: 1700857711150375620, guid: 674f371deb20e904eb6ea66c0e2f21a7, type: 3}
+      propertyPath: cooldownImage
+      value: 
+      objectReference: {fileID: 1853423788}
     - target: {fileID: 6959451596162885214, guid: 674f371deb20e904eb6ea66c0e2f21a7, type: 3}
       propertyPath: m_RootOrder
       value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 6959451596162885214, guid: 674f371deb20e904eb6ea66c0e2f21a7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.42
+      value: -10.5
       objectReference: {fileID: 0}
     - target: {fileID: 6959451596162885214, guid: 674f371deb20e904eb6ea66c0e2f21a7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.25
+      value: -2.12
       objectReference: {fileID: 0}
     - target: {fileID: 6959451596162885214, guid: 674f371deb20e904eb6ea66c0e2f21a7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1433,13 +1445,24 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1829351934}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 34.7195, y: -13.661, z: 0}
-  m_LocalScale: {x: 1.3310251, y: 1.4065567, z: 1}
+  m_LocalPosition: {x: 34.6871, y: -15.6043, z: 0}
+  m_LocalScale: {x: 1.3282174, y: 1.8689259, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1853423788 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3025890634175814831, guid: d79cce0db5039c54694d3db1092dba6f, type: 3}
+  m_PrefabInstance: {fileID: 70813142}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2084469283
 GameObject:
   m_ObjectHideFlags: 0
@@ -8549,3 +8572,14 @@ TilemapCollider2D:
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
+--- !u!114 &2138560193 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 808014231021130244, guid: d79cce0db5039c54694d3db1092dba6f, type: 3}
+  m_PrefabInstance: {fileID: 70813142}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f96f8bbf3b8359746b6ace23d1d3e482, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
