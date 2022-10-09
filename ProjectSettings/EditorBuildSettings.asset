@@ -36,6 +36,6 @@ EditorBuildSettings:
     path: Assets/Scenes/final_level.unity
     guid: a1da3cd132b0e91bda486fae1741fddd
   - enabled: 1
-    path: Assets/Scenes/YouWonScene.unity
-    guid: 4292be110b7f9824ab0a56f8e74e1f67
+    path: Assets/Scenes/YouWinScreen.unity
+    guid: 4cfda003f1bb8d84f9e6cfd643612ca0
   m_configObjects: {}
