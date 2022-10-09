@@ -18,7 +18,8 @@ public class HealthController : MonoBehaviour
      }
    
      // Update is called once per frame
-     void Update () {health = bobbertHealth.health;
+     void Update () {
+          health = bobbertHealth.health;
           LifeBar();
      }
      

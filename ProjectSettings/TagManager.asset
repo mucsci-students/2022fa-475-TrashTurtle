@@ -8,6 +8,7 @@ TagManager:
   - CrosshairPrefab
   - Ground
   - Enemy
+  - Powerup
   layers:
   - Default
   - TransparentFX
