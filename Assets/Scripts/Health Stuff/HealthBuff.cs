@@ -13,6 +13,7 @@ public class HealthBuff : PowerupEffect
     public override void Apply(GameObject target)
     {
         currentHealth = target.GetComponent<BobbertHealth>().health;
+        
         // Check the heal amount + Bobbert's current health.
         totalHealth = currentHealth + amount;
         
