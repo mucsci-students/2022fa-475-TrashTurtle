@@ -520,6 +520,7 @@ MonoBehaviour:
   health: 0
   colorChangeTimer: 0
   ow: {fileID: 7514737286582647262}
+  hp: {fileID: 0}
 --- !u!114 &6959451597634623139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -675,7 +676,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!82 &913141555
 AudioSource:

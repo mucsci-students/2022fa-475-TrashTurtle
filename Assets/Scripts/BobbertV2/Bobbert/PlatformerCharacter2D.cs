@@ -25,6 +25,8 @@ namespace UnityStandardAssets._2D
 
         public float jumpHoldDuration = 0.25f;  // Max duration to hold space and gain velocity.
         public float jumpHoldCounter;           // Control for jumpHoldDuration
+        private float normalMass = 1.0f;
+        private float shieldDummyThickFatmAss = 1000.0f;
 
         private void Awake()
         {
@@ -71,6 +73,16 @@ namespace UnityStandardAssets._2D
 
             // Set whether or not the character is crouching in the animator
             m_Anim.SetBool("Shield", shield);
+        
+            if(shield)
+            {
+                m_Rigidbody2D.mass = shieldDummyThickFatmAss;
+            }
+            if(!shield)
+            {
+                m_Rigidbody2D.mass = normalMass;
+            }
+
 
             //only control the player if grounded or airControl is turned on
             if (m_Grounded || m_AirControl)
@@ -141,7 +153,11 @@ namespace UnityStandardAssets._2D
                 }
             }
             // No more jumping for you x2.
-            if(!jump_2) { isJumping = false; }
+            if(!jump_2) 
+            { 
+                isJumping = false; 
+                jumpHoldCounter = 0;
+            }
         }
 
         // Flip player depending on the way they are / should be facing.
