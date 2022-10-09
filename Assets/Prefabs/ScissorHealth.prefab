@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5439471122864295586}
   - component: {fileID: 2819640139061775230}
   - component: {fileID: 6914180468769126530}
-  - component: {fileID: 5485318392915986626}
+  - component: {fileID: 57588881}
   m_Layer: 8
   m_Name: ScissorHealth
   m_TagString: Untagged
@@ -112,7 +112,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.742591, y: 3.7276418}
   m_EdgeRadius: 0
---- !u!114 &5485318392915986626
+--- !u!114 &57588881
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -124,4 +124,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5579bfee8e5106f4ea5e6bbd3d6076a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  powerupEffect: {fileID: 0}
+  powerupEffect: {fileID: 11400000, guid: 55d2472af72fe76428c7afb3b6d27511, type: 2}
