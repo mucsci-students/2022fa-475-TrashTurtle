@@ -13,6 +13,7 @@ public class BobbertHealth : MonoBehaviour
     public float colorChangeTimer;
     public OwRandom ow;
     public HealthController hp;
+    private bool shield;
 
     // Start is called before the first frame update
     void Start()
@@ -26,8 +27,10 @@ public class BobbertHealth : MonoBehaviour
     // Also will be used by scissors !
     public void UpdateHealth(int mod)
     {
+        shield = Input.GetKey(KeyCode.S);
+
         // If Bobbert's health is going down:
-        if(health + mod <= health)
+        if(!shield && health + mod <= health)
         {
             if(!isHit)
             {
@@ -37,18 +40,20 @@ public class BobbertHealth : MonoBehaviour
                 StartCoroutine("Flash");
             }
         }
-
-        health += mod;
         
-        hp.LifeBar(health);
+        if(!shield){
+            health += mod;
+            
+            hp.LifeBar(health);
 
-        if (health > maxHealth)
-        {
-            health = maxHealth;
-        } else if (health <= 0)
-        {
-            health = 0;
-            PlayerDied();
+            if (health > maxHealth)
+            {
+                health = maxHealth;
+            } else if (health <= 0)
+            {
+                health = 0;
+                PlayerDied();
+            }
         }
     }
  
