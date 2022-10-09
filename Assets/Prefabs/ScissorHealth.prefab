@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2819640139061775230}
   - component: {fileID: 6914180468769126530}
   - component: {fileID: 5485318392915986626}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ScissorHealth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,7 +121,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5195038580233511054}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12abcd400d9a47845a5f14b1e4f71d33, type: 3}
+  m_Script: {fileID: 11500000, guid: 5579bfee8e5106f4ea5e6bbd3d6076a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthBonus: 1
+  powerupEffect: {fileID: 0}

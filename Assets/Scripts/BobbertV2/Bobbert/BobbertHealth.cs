@@ -44,7 +44,7 @@ public class BobbertHealth : MonoBehaviour
         if(!shield){
             health += mod;
             
-            hp.LifeBar(health);
+            //hp.LifeBar(health);
 
             if (health > maxHealth)
             {

@@ -3778,6 +3778,14 @@ PrefabInstance:
       propertyPath: shootCooldown
       value: 0.25
       objectReference: {fileID: 0}
+    - target: {fileID: 1700857711150375622, guid: 674f371deb20e904eb6ea66c0e2f21a7, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1700857711196705583, guid: 674f371deb20e904eb6ea66c0e2f21a7, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2727630554951308060, guid: 674f371deb20e904eb6ea66c0e2f21a7, type: 3}
       propertyPath: Loop
       value: 1
@@ -6024,6 +6032,17 @@ Transform:
   m_Father: {fileID: 1971979307}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 80}
+--- !u!114 &1482234079 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5932290123692775477, guid: 674f371deb20e904eb6ea66c0e2f21a7, type: 3}
+  m_PrefabInstance: {fileID: 913141552}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5408bb8eadb536048910f8df00f72466, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1483198973
 GameObject:
   m_ObjectHideFlags: 0
@@ -44878,6 +44897,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ScissorHealth
       objectReference: {fileID: 0}
+    - target: {fileID: 5195038580233511054, guid: 1198dc8b7a6a6b14dbf45023e3cfbf1b, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5439471122864295586, guid: 1198dc8b7a6a6b14dbf45023e3cfbf1b, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -45222,6 +45245,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1121771917, guid: d79cce0db5039c54694d3db1092dba6f, type: 3}
+      propertyPath: bobbertHealth
+      value: 
+      objectReference: {fileID: 1482234079}
     - target: {fileID: 808014231021130241, guid: d79cce0db5039c54694d3db1092dba6f, type: 3}
       propertyPath: m_Name
       value: GameOverlays

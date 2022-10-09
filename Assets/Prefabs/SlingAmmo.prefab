@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2418254615337412501}
   - component: {fileID: 2597532589804898776}
   - component: {fileID: 2378460199306698103}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: SlingAmmo
   m_TagString: Player
   m_Icon: {fileID: 0}
