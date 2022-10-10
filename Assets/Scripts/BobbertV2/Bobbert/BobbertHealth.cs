@@ -51,6 +51,7 @@ public class BobbertHealth : MonoBehaviour
                 health = maxHealth;
             } else if (health <= 0)
             {
+                Debug.Log("Fkn be dead idiot");
                 health = 0;
                 PlayerDied();
             }
