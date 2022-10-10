@@ -5,16 +5,21 @@ Completed in 3 weeks for the Millersville University CSCI 475 course, Fall 2022.
 
 ## 🐢 How To Play
 
-Enter the following command into your terminal:
-```
-git clone https://github.com/mucsci-students/2022fa-475-TrashTurtle.git
-```
-
 ### Windows:
-INCOMPLETE
+1. [Download the .zip file](https://drive.google.com/file/d/1H9Io4ghb9TKE2seajCiTOKI_xIA43rpb/view?usp=sharing)
+2. Unzip the file through file explorer
+3. Run TrashTurtle.exe by double clicking
+4. Enjoy!
+
 
 ### Mac:
-INCOMPLETE
+1. [Download the .zip file](https://drive.google.com/file/d/1rgK9GP9jGsdq_a1GTaOuzJWMwXa2b7pW/view?usp=sharing)
+2. Unzip it, either in finder or by navigating to the folder you downloaded it with the terminal: ```unzip TrashTurtleMac.zip```
+3. If you haven't already, open a terminal session and navigate to the folder where you downloaded it. Run this command to set the executable permissions: ```chmod a+x TrashTurtleMac.app/Contents/MacOS/* ```
+3. Double click to try and open. Mac will give you a security error.
+4. Navigate to System Preferences > Security and Privacy > General tab. 
+5. At the bottom there should be a button for an app you tried to recently open, TrashTurtleMac. Click run anyways.
+6. Enjoy!
 
 ## 🐢 Developers
 - [Christian Shepperson](https://github.com/Sh3p)
