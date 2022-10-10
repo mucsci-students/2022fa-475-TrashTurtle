@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1022141797682306206}
   - component: {fileID: 1022141797682306207}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,7 +101,7 @@ GameObject:
   - component: {fileID: 1022141797918903169}
   - component: {fileID: 1022141797918903175}
   - component: {fileID: 1022141797918903174}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -175,7 +175,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1022141798072781257}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -214,7 +214,7 @@ GameObject:
   - component: {fileID: 1022141798416751241}
   - component: {fileID: 1022141798416751247}
   - component: {fileID: 1022141798416751246}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -294,7 +294,7 @@ GameObject:
   - component: {fileID: 1022141798896616613}
   - component: {fileID: 1022141798896616635}
   - component: {fileID: 1022141798896616634}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -398,7 +398,7 @@ MonoBehaviour:
   Slider: {fileID: 1022141797682306207}
   low: {r: 1, g: 1, b: 1, a: 0}
   high: {r: 1, g: 1, b: 1, a: 0}
-  offset: {x: 0, y: 0, z: 0}
+  offset: {x: 0, y: 5000, z: 500}
 --- !u!114 &1022141798896616635
 MonoBehaviour:
   m_ObjectHideFlags: 0

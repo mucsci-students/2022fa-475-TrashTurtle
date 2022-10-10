@@ -8,8 +8,10 @@ public class Powerup : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        // might need to check here that it's a player and not an enemy
-        Destroy(gameObject);
-        powerupEffect.Apply(collision.gameObject);
+        
+        if(collision.gameObject.name == "BobbertV3"){
+            Destroy(gameObject);
+            powerupEffect.Apply(collision.gameObject);
+        }
     }
 }

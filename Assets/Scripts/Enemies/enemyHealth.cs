@@ -16,7 +16,7 @@ public class enemyHealth : MonoBehaviour
     void Start()
     {
         Hitpoints = MaxHitpoints;
-        healthBar.SetHealth(Hitpoints, MaxHitpoints);
+        // healthBar.SetHealth(Hitpoints, MaxHitpoints);
         spriteRenderer = GetComponentInParent<SpriteRenderer>();
         defaultColor = spriteRenderer.color;
     }
