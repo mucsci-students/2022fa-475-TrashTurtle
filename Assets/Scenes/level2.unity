@@ -55810,6 +55810,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1505342413 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 815828727781470360, guid: 7d64f32dd6847a74a85ec5eb85e4ac24, type: 3}
+  m_PrefabInstance: {fileID: 716885732}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa3512e1d101f6a49aefeacdf0290a4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1511543432
 GameObject:
   m_ObjectHideFlags: 0
@@ -57880,10 +57891,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1121771917, guid: d79cce0db5039c54694d3db1092dba6f, type: 3}
-      propertyPath: bobbertHealth
-      value: 
-      objectReference: {fileID: 1975055666}
     - target: {fileID: 808014231021130241, guid: d79cce0db5039c54694d3db1092dba6f, type: 3}
       propertyPath: m_Name
       value: GameOverlays
@@ -57972,6 +57979,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3025890632210894821, guid: d79cce0db5039c54694d3db1092dba6f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1505342413}
+    - target: {fileID: 3025890632210894821, guid: d79cce0db5039c54694d3db1092dba6f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ReloadCurrentScene
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d79cce0db5039c54694d3db1092dba6f, type: 3}
 --- !u!1001 &1953033286
@@ -58045,17 +58060,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6959451596162885214, guid: 674f371deb20e904eb6ea66c0e2f21a7, type: 3}
   m_PrefabInstance: {fileID: 1273382606}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1975055666 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5932290123692775477, guid: 674f371deb20e904eb6ea66c0e2f21a7, type: 3}
-  m_PrefabInstance: {fileID: 1273382606}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5408bb8eadb536048910f8df00f72466, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2015175242
 GameObject:
   m_ObjectHideFlags: 0

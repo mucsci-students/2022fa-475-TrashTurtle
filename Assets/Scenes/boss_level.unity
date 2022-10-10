@@ -309,6 +309,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3025890632210894821, guid: d79cce0db5039c54694d3db1092dba6f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1367151901}
+    - target: {fileID: 3025890632210894821, guid: d79cce0db5039c54694d3db1092dba6f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ReloadCurrentScene
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d79cce0db5039c54694d3db1092dba6f, type: 3}
 --- !u!1001 &98126588
@@ -1414,6 +1422,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d64f32dd6847a74a85ec5eb85e4ac24, type: 3}
+--- !u!114 &1367151901 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 815828727781470360, guid: 7d64f32dd6847a74a85ec5eb85e4ac24, type: 3}
+  m_PrefabInstance: {fileID: 1367151900}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa3512e1d101f6a49aefeacdf0290a4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1430961951
 GameObject:
   m_ObjectHideFlags: 0
