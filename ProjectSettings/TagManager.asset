@@ -61,3 +61,6 @@ TagManager:
   - name: Projectile
     uniqueID: 2677827373
     locked: 0
+  - name: TutText
+    uniqueID: 2055693275
+    locked: 0
