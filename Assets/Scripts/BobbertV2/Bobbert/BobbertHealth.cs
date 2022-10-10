@@ -89,6 +89,7 @@ public class BobbertHealth : MonoBehaviour
             // Change him back to his normal color
             spriteRenderer.color = defaultColor;
             isHit = false;
+            // plese work
         }
     }
 }
