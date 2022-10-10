@@ -18,10 +18,22 @@ public class MenuController : MonoBehaviour
     [SerializeField] private GameObject confirmationPrompt = null;
 
     public string _newGameLevel;
+    public string _level2;
+    public string _level3;
 
     public void PlayButton()
     {
         SceneManager.LoadScene(_newGameLevel);
+    }
+
+    public void LoadLevelTwo()
+    {
+        SceneManager.LoadScene(_level2);
+    }
+
+    public void LoadLevelThree()
+    {
+        SceneManager.LoadScene(_level3);
     }
     
     public void QuitButton()
