@@ -27,6 +27,9 @@ Completed in 3 weeks for the Millersville University CSCI 475 course, Fall 2022.
 - [Samantha Noggle](https://github.com/astruxie)
 
 ## 🐢 Assets Used
+
+Voice of Bobbert: Robert Corle
+
 https://elthen.itch.io/2d-pixel-art-turtle-sprites
 
 https://opengameart.org/content/ocean-background
